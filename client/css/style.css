@@ -1,0 +1,23 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+/**********/
+
+/** start index.html styling **/
+
+.input-field label {
+     color: black;
+}
+.nav-wrapper{
+  background-color: #f2e2ca;
+}
+.subnav{
+  display: inline-block;
+  vertical-align: center;
+}
+.career ul li {
+  list-style: disc inside;
+}

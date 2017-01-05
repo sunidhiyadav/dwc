@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html ng-app="DWC">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <title>Day Worker Center of Mountain View</title>
+    <!-- <meta name="description" content="Our mission is to connect workers and employers in a safe and supportive environment. Empower workers to improve their socio-economic condition through fair employment, education, and job skills training. Participate in advocacy efforts that support the day laborer community." />  -->
+	<!-- <meta name="keywords" content="Dayworker Center, Mountain View, jornaleros, laborers, jobs, workers" /> -->
+
+
+    <!-- Materialize CSS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="./css/materialize.css">
+    <link type="text/css" rel="stylesheet" href="./css/style.css">
+
+    <!-- favicon(the tab icon) -->
+    <link rel="apple-touch-icon" sizes="57x57" href="./images/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="./images/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="./images/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="./images/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="./images/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="./images/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="./images/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="./images/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="./images/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="./images/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="./images/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+	<link rel="manifest" href="./manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="./images/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+    <!-- JavaScript for: jQuery, angular, materialize, and angular-materialize. All of which are needed. -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script>
+    <script src="js/init.js"></script>
+    <!-- <script language="JavaScript" src="./js/gen_validatorv31.js" type="text/javascript"></script> -->
+
+    <!-- ANGULAR -->
+    <script src="angular/angular.js"></script>
+    <script src="angular-route/angular-route.js"></script>
+    <script src="angular-messages/angular-messages.js"></script>
+    <script src="angular-base64/angular-base64.js"></script>
+    <script src="angular-base64-upload/src/angular-base64-upload.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="angular-cookies/angular-cookies.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.1/angular-materialize.min.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<!--controllers-->
+<script src = "./controllers/loginController.js"></script>
+<script src = "./controllers/allUsersController.js"></script>
+<script src = "./controllers/showUserController.js"></script>
+<script src = "./controllers/editUserController.js"></script>
+<script src = "./controllers/newUserController.js"></script>
+
+<script src = "./controllers/jobEditController.js"></script>
+<script src = "./controllers/jobIndexController.js"></script>
+<script src = "./controllers/jobNewController.js"></script>
+<script src = "./controllers/jobShowController.js"></script>
+
+<script src = "./controllers/mailEditController.js"></script>
+<script src = "./controllers/mailIndexController.js"></script>
+<script src = "./controllers/mailNewController.js"></script>
+<script src = "./controllers/mailShowController.js"></script>
+
+<script src = "./controllers/pageEditController.js"></script>
+<script src = "./controllers/pageIndexController.js"></script>
+<script src = "./controllers/pageNewController.js"></script>
+<script src = "./controllers/pageShowController.js"></script>
+<!--factories -->
+<script src = "./factories/userFactory.js"></script>
+<script src = "./factories/jobsFactory.js"></script>
+<script src = "./factories/pagesFactory.js"></script>
+<script src = "./factories/mailsFactory.js"></script>
+
+<body>
+	<!-- background image start -->
+	<div style= "min-height: 100vmin; background-image: url(./../images/body_bgrd.gif)"  >
+		<br>
+		<div class="z-depth-5 container" style="background: linear-gradient(45deg, #be9e6a 0%, #c3a473 9%, #f2e2ca 97%, #dfdfb4 100%); border: 3px solid black; padding:0% 1%;">
+
+			<nav style="min-height: 90px">
+				<div class="nav-wrapper" style ="margin: 0% -1%">
+					<!-- <a href="#!" class="brand-logo white-text">DWC</a> -->
+					<div class="row">
+					<a href="#!"><img class="col s7 m5 l3" src="../images/DWC_Logo.png" alt="DWC Logo"></a>
+					<a href="#!" data-activates="mobile-nav" class="button-collapse" style="float: right;margin: 0% 3%"><i class="material-icons blue-text">menu</i></a>
+					<ul class="right hide-on-med-and-down" style="margin-right: 1%">
+						<li><a href="#/aboutus" class="blue-text waves-effect waves-light">About Us</a></li>
+						<li><a href="#/employers" class="blue-text waves-effect waves-light">For Employers</a></li>
+						<li><a href="#/workers" class="blue-text waves-effect waves-light">For Workers</a></li>
+						<li><a href="#/volunteer" class="blue-text waves-effect waves-light">For Volunteers</a></li>
+						<li><a href="#/donate" class="blue-text waves-effect waves-light">For Donors</a></li>
+					</ul>
+					<ul class="side-nav #ffe082-4" id="mobile-nav">
+						<li><a href="#/aboutus" class="blue-text waves-effect waves-light">About Us</a></li>
+						<li><a href="#/employers" class="blue-text waves-effect waves-light">For Employers</a></li>
+						<li><a href="#/workers" class="blue-text waves-effect waves-light">For Workers</a></li>
+						<li><a href="#/volunteer" class="blue-text waves-effect waves-light">For Volunteers</a></li>
+						<li><a href="#/donate" class="blue-text waves-effect waves-light">For Donors</a></li>
+					</ul>
+				</div>
+				</div>
+			</nav>
+
+			<!-- This is navbar start -->
+
+			<!-- partials div start -->
+			<div ng-view="">
+			</div>
+			<!-- partials div end -->
+
+			<!-- 	footer start -->
+
+			<div class="row">
+				<div class="col s12">
+					<div class="footer" align="center">
+						<p>Day Worker Center of Mountain View, 113 Escuela Ave., Mountain View, CA 94040&nbsp;&nbsp;&nbsp;650-903-4102 &nbsp;&nbsp;&nbsp; <a href="mailto:info@dayworkercentermv.org">info@dayworkercentermv.org</a> &nbsp;&nbsp;&nbsp; <a href="#/staff">Staff Site</a></p>
+					</div>
+				</div>
+			</div>
+	</div>
+	<br>
+	<br>
+</div>
+	<!-- background image start -->
+</body>
+<!-- </body> -->
+</html>

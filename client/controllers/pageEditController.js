@@ -6,7 +6,8 @@ DWCAppModule.controller('pageEditController', ['$scope','pagesFactory', '$cookie
   $scope.lastName = $cookies.get("lastName");
   $scope.emailAddress = $cookies.get("emailAddress");
   if(!logged_in_user){
-    $location.url('/staff/login')
+    //$location.url('/staff/login')
+    return $location.path('/staff/login').replace();
   }
 
   $scope.update = function(){

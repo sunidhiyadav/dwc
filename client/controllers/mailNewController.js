@@ -10,7 +10,11 @@ DWCAppModule.controller('mailNewController', ['$scope','mailsFactory', '$cookies
   $scope.lastName = $cookies.get("lastName");
   $scope.emailAddress = $cookies.get("emailAddress");
   if(!logged_in_user){
-    $location.url('/staff/login')
+    console.log('User not logged in');
+    //window.l=$location;
+    return $location.path('/staff/login').replace();
+    //$location.url('/staff/login')
+    console.log('User not logged in: after redirect');
   }
 
   $scope.create = function(){

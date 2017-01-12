@@ -9,13 +9,13 @@ DWCAppModule.controller('mailNewController', ['$scope','mailsFactory', '$cookies
   $scope.userLevel = $cookies.get("userLevel");
   $scope.lastName = $cookies.get("lastName");
   $scope.emailAddress = $cookies.get("emailAddress");
-  if(!logged_in_user){
+  /*if(!logged_in_user){
     console.log('User not logged in');
     //window.l=$location;
     return $location.path('/volunteers/signup').replace();
     //$location.url('/staff/login')
     console.log('User not logged in: after redirect');
-  }
+  }*/
 
   $scope.create = function(){
     mailsFactory.createMail($scope.mail, function(){

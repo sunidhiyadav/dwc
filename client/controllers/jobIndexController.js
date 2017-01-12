@@ -5,10 +5,10 @@ DWCAppModule.controller('jobIndexController', ['$scope','jobsFactory', '$cookies
   $scope.lastName = $cookies.get("lastName");
   $scope.emailAddress = $cookies.get("emailAddress");
 
-  if(!logged_in_user){
+  /*if(!logged_in_user){
     //$location.url('/staff/login')
     return $location.path('/staff/login').replace();
-  }
+  }*/
     $scope.index = function(){
         jobsFactory.getAllJobs(function(returnedData){
             $scope.jobs = returnedData;

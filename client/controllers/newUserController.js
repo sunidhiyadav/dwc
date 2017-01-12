@@ -5,10 +5,10 @@ DWCAppModule.controller('newUserController', function($scope, $routeParams, $coo
 	$scope.userLevel = $cookies.get("userLevel");
 	$scope.lastName = $cookies.get("lastName");
 	$scope.emailAddress = $cookies.get("emailAddress");
-	if(!logged_in_user){
+	/*if(!logged_in_user){
 		//$location.url('/staff/login')
 		return $location.path('/staff/login').replace();
-	}
+	}*/
 
   $scope.register=function(){
 		userFactory.addUser($scope.newUser, function(userArray){

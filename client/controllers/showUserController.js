@@ -4,10 +4,10 @@ DWCAppModule.controller('showUserController', function($scope, $cookies ,$routeP
   $scope.userLevel = $cookies.get("userLevel");
   $scope.lastName = $cookies.get("lastName");
   $scope.emailAddress = $cookies.get("emailAddress");
-  if(!logged_in_user){
+  /*if(!logged_in_user){
     //$location.url('/staff/login')
 		return $location.path('/staff/login').replace();
-  }
+  }*/
 
   var userID=$routeParams.id;
 

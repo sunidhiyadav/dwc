@@ -5,10 +5,10 @@ DWCAppModule.controller('pageEditController', ['$scope','pagesFactory', '$cookie
   $scope.userLevel = $cookies.get("userLevel");
   $scope.lastName = $cookies.get("lastName");
   $scope.emailAddress = $cookies.get("emailAddress");
-  if(!logged_in_user){
+  /*if(!logged_in_user){
     //$location.url('/staff/login')
     return $location.path('/staff/login').replace();
-  }
+  }*/
 
   $scope.update = function(){
       pagesFactory.updatePage(routeParams.id, $scope.page, function(data){

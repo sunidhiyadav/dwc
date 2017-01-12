@@ -8,10 +8,10 @@ DWCAppModule.controller('mailIndexController', ['$scope','mailsFactory', '$cooki
   $scope.userLevel = $cookies.get("userLevel");
   $scope.lastName = $cookies.get("lastName");
   $scope.emailAddress = $cookies.get("emailAddress");
-  if(!logged_in_user){
+  /*if(!logged_in_user){
     //$location.url('/staff/login')
     return $location.path('/staff/login').replace();
-  }
+  }*/
   $scope.index = function(){
     mailsFactory.getAllMails(function(returnedData){
       $scope.mails = returnedData;

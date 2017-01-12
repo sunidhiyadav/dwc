@@ -5,10 +5,10 @@ DWCAppModule.controller('mailEditController', ['$scope','$cookies','mailsFactory
   $scope.userLevel = $cookies.get("userLevel");
   $scope.lastName = $cookies.get("lastName");
   $scope.emailAddress = $cookies.get("emailAddress");
-  if(!logged_in_user){
+  /*if(!logged_in_user){
     //$location.url('/staff/login')
     return $location.path('/staff/login').replace();
-  }
+  }*/
 
   $scope.update = function(){
     mailsFactory.updateMail(routeParams.id, $scope.mail, function(data){

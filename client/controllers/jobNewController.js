@@ -12,8 +12,10 @@ DWCAppModule.controller('jobNewController', ['$scope','jobsFactory','$cookies' ,
   $scope.lastName = $cookies.get("lastName");
   $scope.emailAddress = $cookies.get("emailAddress");
   if(!logged_in_user){
+    console.log("not loggged in");
     //$location.url('/staff/login')
     return $location.path('/staff/login').replace();
+
   }
 
   $scope.create = function(){

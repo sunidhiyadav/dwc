@@ -14,8 +14,12 @@ DWCAppModule.controller('jobNewController', ['$scope','jobsFactory','$cookies' ,
   if(!logged_in_user){
     console.log("not loggged in");
     //$location.url('/staff/login')
+<<<<<<< HEAD
     return $location.path('/staff/login').replace();
 
+=======
+    return $location.path('/employers/reserveworker').replace();
+>>>>>>> 5f9b731b3966780aa1d35da11a872144745491fd
   }
 
   $scope.create = function(){

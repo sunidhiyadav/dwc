@@ -1,21 +1,20 @@
-<div class="row">
+<div >
 	<img div class="col s12 m12 l12" src="../images/DWC_employees.jpg" alt="[DWC Members picture]"/>
 </div>
-<div class="row">
-	<h4 class="center-align">Reserve Worker</h4>
+<div>
+	<h5 class="center-align">Reserve Worker</h5>
 </div>
-<div class="row">
-	<p class="flow-text center-align col s10 offset-s1">When you need help with a big project or with routine work around your home, you are welcome to simply come to the center on the day of your job and a friendly staff member will help you and have you on your way in minutes. To help us connect you with a worker with the desired skills, fill out the below form. We are open from 7am to 5pm, Monday to Saturday, but note that there are fewer workers available later in the day. (Note: if you have an ongoing project and have found that one of our workers is providing a valuable service, simply arrange with that worker to continue on consecutive days.)</p>
+<div>
+	<p class="flow-text col s10 offset-s1" style="font-size:15px;">When you need help with a big project or with routine work around your home, you are welcome to simply come to the center on the day of your job and a friendly staff member will help you and have you on your way in minutes. To help us connect you with a worker with the desired skills, fill out the below form. We are open from 7am to 5pm, Monday to Saturday, but note that there are fewer workers available later in the day. (Note: if you have an ongoing project and have found that one of our workers is providing a valuable service, simply arrange with that worker to continue on consecutive days.)</p>
 </div>
-<div class="row">
+<div >
     <form ng-submit="create()" class="col s12">
       {{ errors }}
-        <div class="row">
+        <div >
             <h5 class="center-align">Employer Information</h5>
         </div>
-        <hr>
-      <div class="row">
-        <div class="input-field col s6">
+      <div >
+        <div class="input-field col s6" >
           <input id="first_name" type="text" class="validate" ng-model="job.firstName" required>
           <label for="first_name">*First Name</label>
           {{errors.firstName.messages}}
@@ -26,21 +25,21 @@
           {{errors.lastName.messages}}
         </div>
       </div>
-      <div class="row">
+      <div >
         <div class="input-field col s12">
           <input id="company_name" type="text" class="validate" ng-model="job.companyName">
           <label for="company_name">Company Name (if applicable)</label>
           {{errors.companyName.messages}}
         </div>
       </div>
-      <div class="row">
+      <div >
         <div class="input-field col s12">
           <input id="physicalAddress" type="text" class="validate" ng-model="job.physicalAddress" required>
           <label for="physicalAddress">*Address</label>
           {{errors.physicalAddress.messages}}
         </div>
       </div>
-      <div class="row">
+      <div >
         <div class="input-field col s6">
           <input id="city" type="text" class="validate" ng-model="job.city" required>
           <label for="city">*City</label>
@@ -52,7 +51,7 @@
           {{errors.zip.messages}}
         </div>
       </div>
-      <div class="row">
+      <div>
       <div class="input-field col s6">
           <input id="phoneNumber" type="text" class="validate" ng-model="job.phoneNumber" required>
           <label for="phoneNumber">*Phone</label>
@@ -64,7 +63,7 @@
           {{errors.emailAddress.messages}}
         </div>
       </div>
-      <div class="row">
+      <div>
         <div class="col s12">
           <div class="input-field inline" ng-model="job.hearAbout">
             <textarea id="howHeard" class="materialize-textarea"></textarea>
@@ -74,27 +73,24 @@
         </div>
       </div>
       <hr>
-      <br>
-        <div class="row">
+        <div>
             <h5 class="center-align">Job Information</h5>
         </div>
-        <hr>
-
-      <div class="row">
+      <div >
         <div class="input-field col s12">
           <input id="worksite" type="text" ng-model="job.worksite">
           <label for="worksite">Worksite (if different from above)</label>
           {{errors.workSite.messages}}
         </div>
       </div>
-      <div class="row">
+      <div >
         <div class="input-field col s12">
           <input id="jobDescription" type="text" ng-model="job.jobDescription" required>
           <label for="JobDescription">*Job Description</label>
           {{errors.jobDescription.messages}}
         </div>
       </div>
-        <div class="row">
+        <div>
             <div class="input-field col s4">
                 <input id="startDate" type="date" class="datepicker" ng-model="job.startDate" required>
                 <label for="startDate">*Start Date</label>
@@ -160,14 +156,14 @@
                 {{errors.estimatedHours.messages}}
             </div>
         </div>
-        <div class="row">
+        <div>
             <div class="input-field col s12">
                 <input id="skillsNeeded" type="text" class="validate" ng-model="job.skillsNeeded" required>
                 <label for="skillsNeeded">*Job Skills Needed</label>
                 {{errors.skillsNeeded.messages}}
             </div>
         </div>
-        <div class="row">
+        <div >
             <div class="input-field col s6">
                 <input id="numberOfWorkers" type="number" class="validate" ng-model="job.numberOfWorkers" required>
                 <label for="numberOfWorkers">*Number of Workers Needed</label>
@@ -208,9 +204,8 @@
   			</button>
   		</div>
   	</form>
-    
+
   </div>
-  <hr>
 
   <script type="text/javascript">
   	$(document).ready(function() {
@@ -222,5 +217,3 @@
   	});
   });
   </script>
-
-

@@ -64,32 +64,32 @@
 					<div>
 						<label for="firstName">* First Name:</label>
 						<div class="iefix">
-							<input id="firstName" ng-model="mail.firstName" type="text" />
+							<input id="firstName" ng-model="mail.firstName" type="text" required/>
 						</div>
 					</div>
 					<div>
 						<label for="lastName">* Last Name:</label>
 						<div class="iefix">
-							<input id="lastName" ng-model="mail.lastName" type="text"/>
+							<input id="lastName" ng-model="mail.lastName" type="text" required/>
 						</div>
 					</div>
 					<div>
-						<label for="email">E-mail Address:</label>
+						<label for="email">*E-mail Address:</label>
 						<div class="iefix">
-							<input id="email" ng-model="mail.emailAddress" type="text"/>
+							<input id="email" ng-model="mail.emailAddress" type="text" required/>
 						</div>
 					</div>
 					<div>
-						<label for="phone">Phone:</label>
+						<label for="phone">*Phone:</label>
 						<div class="iefix">
-							<input id="phone" ng-model="mail.phoneNumber" type="text"/>
+							<input id="phone" ng-model="mail.phoneNumber" type="text" required/>
 						</div>
 					</div>
 					(* One of E-mail Address or Phone is required)<br /><br />
 					<div>
 						<label for="message">* What I can do:</label>
 						<div class="iefix">
-							<textarea id="message" ng-model="mail.message" class="type_text"></textarea>
+							<textarea id="message" ng-model="mail.message" class="type_text" required></textarea>
 						</div>
 					</div>
 					<input id="contactType" ng-model="mail.contactType" type="hidden"/>

@@ -10,6 +10,27 @@ DWCAppModule.factory('jobsFactory', ['$http', function($http){
         });
     }
 
+
+    factory.populateUserData = function(newJob, callback){
+      console.log(newJob);
+
+        $http.post("/userdata", newJob).then(function(returned_data){
+            if(typeof(callback) == 'function'){
+              //  callback(returned_data.data);
+                if(returned_data.data.errors){
+
+                  //  window.location.href = '#/fail'
+                }
+                else{
+                  console.log(returned_data);
+                  callback(returned_data);
+                //window.location.href = '#/success';
+            }
+            }
+        });
+    }
+
+
     factory.getOneJob = function(id, callback){
         $http.get("/jobs/"+id).then(function(data){
             jobs = data.data;

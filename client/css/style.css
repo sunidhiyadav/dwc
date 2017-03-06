@@ -21,3 +21,17 @@
 .career ul li {
   list-style: disc inside;
 }
+
+
+
+/* Modal Header */
+.modal-header {
+    padding: 2px 16px;
+    background-color: white;
+    color: black;
+}
+
+
+div.alignment {
+      padding-left: 24%;
+}

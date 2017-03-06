@@ -1,0 +1,132 @@
+<div class="row">
+	<div class="col s12 m8 offset-m2 l6 offset-l6">
+		<ul class="subnav">
+			<li class="subnav"><a href="#/employers/reserveworker">Reserve Worker | </a></li>
+			<li class="subnav"><a href="#/employers/services">Services | </a></li>
+			<li class="subnav"><a href="#/employers/success_stories">Success Stories | </a></li>
+			<li class="subnav"><a href="#/employers/faq">Frequently Asked Questions </a></li>
+		</ul>
+	</div>
+	</div>
+	<div class="row">
+<div class="col s12 m4 l4">
+		<div class="card small hide-on-med-and-down">
+		<div class="card-image">
+        	<img src="./../../images/statement_bgrd.gif">
+          	<span class="card-title">Empowering Others</span>
+        </div>
+        <div class="card-content">
+          	<p>"We are realizing our dreams here"</p>
+			<p>"Aqui estamos realizando nuestros suenos"</p>
+        </div>
+	</div>
+</div>
+	<img div class="col s12 m12 l8" src="../images/DWC_employees.jpg" alt="[DWC Members picture]"/>
+</div>
+</div>
+<div class="row">
+	<div class="col s12 m4 l4">
+	<h4>Day Worker Center of Mountain View</h4>
+	<hr/>
+	<h5>Serving Mountain View and surrounding communities since 1996</h5>
+	<p>Open Monday to Saturday, 7am - 5pm</p>
+	<p>113 Escuela Avenue<br>Mountain View, CA, 94040<br>650-903-4102<br><a href="mailto:info@dayworkercentermv.org" class="email">info@dayworkercentermv.org</a>.</p>
+	<hr/>
+	<h5>Day Worker Center Newsletter</h5>
+	<p>Read <a href="#/aboutus/newsletters">the current Newsletter</a></p>
+	<h5>Day Workers' Journal</h5>
+	<p>Visit the <a href="http://dayworkersjournal.wordpress.com/" target="_blank" title="Visit the Day Workers Journal">Day Workers' Journal</a>, a Day Worker Center blog by and about the workers.</p>
+	<hr/>
+	<p><a href="http://www.facebook.com/pages/Day-Worker-Center-of-Mountain-View/135770265238" target="_blank" title="Visit our Facebook page"><img src="../images/facebook_find_us_on_facebook.gif" alt="Find us on Facebook" border="0" /></a></p>
+</div>
+
+		<!--MAIN CONTENT STARTS HERE -->
+<div class="col s12 m8 l8">
+	<!--MAIN CONTENT STARTS HERE -->
+	<div class="main-aboutus">
+
+
+
+    <div class="row">
+        <form ng-submit="create()" class="col s12">
+          {{ errors }}
+            <div class="row">
+                <h5 class="center-align">REGISTER</h5>
+            </div>
+            <hr>
+          <div class="row">
+            <div class="input-field col s6">
+              <input id="first_name" type="text" class="validate" ng-model="job.firstName" required>
+              <label for="first_name">*First Name</label>
+              {{errors.firstName.messages}}
+            </div>
+            <div class="input-field col s6">
+              <input id="last_name" type="text" class="validate" ng-model="job.lastName" required>
+              <label for="last_name">*Last Name</label>
+              {{errors.lastName.messages}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="username" type="text" class="validate" ng-model="job.username">
+              <label for="username">username</label>
+              {{errors.username.messages}}
+            </div>
+            <div class="input-field col s12">
+              <input id="company_name" type="text" class="validate" ng-model="job.companyName">
+              <label for="company_name">Company Name (if applicable)</label>
+              {{errors.companyName.messages}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="physicalAddress" type="text" class="validate" ng-model="job.physicalAddress" required>
+              <label for="physicalAddress">*Address</label>
+              {{errors.physicalAddress.messages}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+              <input id="city" type="text" class="validate" ng-model="job.city" required>
+              <label for="city">*City</label>
+              {{errors.city.messages}}
+            </div>
+            <div class="input-field col s6">
+              <input id="zip" type="text" class="validate" ng-model="job.zip" required>
+              <label for="zip">*Zip Code</label>
+              {{errors.zip.messages}}
+            </div>
+          </div>
+          <div class="row">
+          <div class="input-field col s6">
+              <input id="phoneNumber" type="text" class="validate" ng-model="job.phoneNumber" required>
+              <label for="phoneNumber">*Phone</label>
+              {{errors.phoneNumber.messages}}
+            </div>
+            <div class="input-field col s6">
+              <input id="emailAddress" type="email" class="validate" ng-model="job.emailAddress" required>
+              <label for="emailAddress">*Email</label>
+              {{errors.emailAddress.messages}}
+            </div>
+              <div><input type="password"  ng-model = "job.password" placeholder= "Password"></div>
+          </div>
+
+
+
+
+                   	<div class="row">
+           		<button class="btn waves-effect waves-light col s4 m4 l2 offset-s4 offset-m4 offset-l5" ng-click="submitRegister()" name="action">Register
+        		<i class="material-icons right">send</i>
+      			</button>
+      		</div>
+      	</form>
+
+      </div>
+          <!-- <button class="btn" ng-click="cancel()">Cancel</button> -->
+          <div class="login-register">
+
+				          Already a member? Please <a href="#/login">Click here</a> to login
+				         </div>
+
+	</div>
+</div>

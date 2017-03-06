@@ -1,4 +1,4 @@
-<h5>DWC Administration Tasks</h5>
+<h2>Welcome, {{firstName}}!</h2>
 
 <!--div ng-if="userLevel==3"-->
 
@@ -10,7 +10,38 @@
 	<li><a href="#/staff/jobs" style="margin:0;position:relative;top:50%;left:40%;">All Jobs</a></li>
 	<li><a href="#/staff/jobs/new" style="margin:0;position:relative;top:50%;left:40%;">New Work Request</a></li>
 	<li><a href="#/staff/jobs/reports" style="margin:0;position:relative;top:50%;left:40%;">Reports</a></li>
+	<li><a href="#/staff/jobs/timings" style="margin:0;position:relative;top:50%;left:40%;">Edit Timings</a></li>
 	<li><a href="#/staff/mails" style="margin:0;position:relative;top:50%;left:40%;">Contact Requests</a></li>
 	<li><a href="#/staff/pages" style="margin:0;position:relative;top:50%;left:40%;">Edit Front Page</a></li>
 </ul>
 <!--a ng-click='logout()'><button class="waves-effect waves-light btn-large">Log Out</button></a-->
+div id="modal1" class="modal">
+	<div class="modal-content">
+
+		<div class="input-field col s12">
+    <label for="timepicker">Time</label>
+    <input id="timepicker" class="timepicker" type="time">
+</div>
+</div>
+
+	<div class="modal-footer">
+		<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+	</div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	// the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+	$('.popup').leanModal();
+});
+
+
+//Time Picker:
+// $('.timepicker').pickatime({
+//     default: 'now',
+//     twelvehour: false, // change to 12 hour AM/PM clock from 24 hour
+//     donetext: 'OK',
+//   autoclose: false,
+//   vibrate: true // vibrate the device when dragging clock hand
+// });
+</script>

@@ -1,7 +1,10 @@
 <div class="row">
 	<div class="col s12 m8 offset-m2 l6 offset-l6">
 		<ul class="subnav">
-			<li class="subnav"><a href="#/employers/reserveworker">Reserve Worker | </a></li>
+
+			<li ng-show="!loggeduser" class="subnav"><a class="popup" href="#modal1">Reserve Worker | </a></li>
+				<!-- <li class="subnav"><a class="popup" href="#modal1">Reserve Worker | </a></li> -->
+			<li ng-show="loggeduser" class="subnav"><a class="popup" href="#/employers/reserveworkerpage">Reserve Worker | </a></li>
 			<li class="subnav"><a href="#/employers/services">Services | </a></li>
 			<li class="subnav"><a href="#/employers/success_stories">Success Stories | </a></li>
 			<li class="subnav"><a href="#/employers/faq">Frequently Asked Questions </a></li>
@@ -28,7 +31,7 @@
 	<h4>Day Worker Center of Mountain View</h4>
 	<hr/>
 	<h5>Serving Mountain View and surrounding communities since 1996</h5>
-	<p>Open Monday to Saturday, 7am - 3:30pm</p>		
+	<p>Open Monday to Saturday, 7am - 3:30pm</p>
 	<p>113 Escuela Avenue<br>Mountain View, CA, 94040<br>650-903-4102<br><a href="mailto:info@dayworkercentermv.org" class="email">info@dayworkercentermv.org</a>.</p>
 	<hr/>
 	<h5>Day Worker Center Newsletter</h5>
@@ -53,3 +56,32 @@
 		<a href="https://goo.gl/forms/RHOpqNydcbRIlSb62"><img class="feedback" src="../images/feedback.png"></a>
 	</div>
 </div>
+
+<div id="modal1" class="modal">
+	<div class="modal-content">
+		<h4></h4>
+		<div class="alignment">
+		<a class="modal-action modal-close waves-effect waves-light btn-large" href="#/employers/login">Login</a>
+	  <a class="modal-action modal-close waves-effect waves-light btn-large" href="#/employers/register">Register</a>
+		<a class="modal-action modal-close waves-effect waves-light btn-large" href="#/employers/reserveworkerpage">Proceed</a>
+		<p>* If you are a new user, please register</p>
+		<p>* Registered users log in to make a request</p>
+		<p>* Click proceed to bypass login</p>
+	</div>
+	<div class="modal-footer">
+		<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+	</div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	// the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+	$('.popup').leanModal();
+});
+</script>
+
+
+<!-- Modal Trigger -->
+
+
+ <!-- Modal Structure -->

@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="./css/materialize.css">
     <link type="text/css" rel="stylesheet" href="./css/style.css">
+      <link type="text/css" rel="stylesheet" href="./css/angular-flash.min.css">
 
     <!-- favicon(the tab icon) -->
     <link rel="apple-touch-icon" sizes="57x57" href="./images/apple-icon-57x57.png">
@@ -46,6 +47,9 @@
     <script src="angular-base64/angular-base64.js"></script>
     <script src="angular-base64-upload/src/angular-base64-upload.js"></script>
     <script src="js/materialize.js"></script>
+    <script src="js/angular-ui-bootstrap-modal.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+      <script src="js/angular-flash.min.js"></script>
     <script src="angular-cookies/angular-cookies.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.1/angular-materialize.min.js"></script>
     <script src="app.js"></script>
@@ -57,6 +61,11 @@
 <script src = "./controllers/showUserController.js"></script>
 <script src = "./controllers/editUserController.js"></script>
 <script src = "./controllers/newUserController.js"></script>
+<script src = "./controllers/registerController.js"></script>
+<script src = "./controllers/loginUserController.js"></script>
+<script src="./controllers/authentication.js"></script>
+<script src="./controllers/logoutController.js"></script>
+<script src="./controllers/employersController.js"></script>
 
 <script src = "./controllers/jobEditController.js"></script>
 <script src = "./controllers/jobIndexController.js"></script>
@@ -78,8 +87,12 @@
 <script src = "./factories/pagesFactory.js"></script>
 <script src = "./factories/mailsFactory.js"></script>
 
+  <script src='services/authentication.service.js'></script>
+
 <body>
 	<!-- background image start -->
+
+  <navigation></navigation>
 	<div style= "min-height: 100vmin; background-image: url(./../images/body_bgrd.gif)"  >
 		<br>
 		<div class="z-depth-5 container" style="background: linear-gradient(45deg, #be9e6a 0%, #c3a473 9%, #f2e2ca 97%, #dfdfb4 100%); border: 3px solid black; padding:0% 1%;">
@@ -106,6 +119,8 @@
 					</ul>
 				</div>
 				</div>
+      <a ng-show="navvm.isLoggedIn" class="blue-text waves-effect waves-light"><b>Welcome,{{ navvm.currentUser.email }}</b></a>
+        <a ng-show="navvm.isLoggedIn" class="blue-text waves-effect waves-light"  href="#/employers/logout"><b>Logout</b></a>
 			</nav>
 
 			<!-- This is navbar start -->

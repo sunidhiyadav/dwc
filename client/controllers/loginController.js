@@ -68,4 +68,29 @@ DWCAppModule.controller('loginController', function($scope, $location, $cookies,
 		$location.url('/');
 	}
 
+
+
+
+  $scope.update = function(){
+    var user_details = {
+          from : $scope.job.workersAssigned,
+          to: $scope.job.assignmentNotes,
+      }
+      console.log(user_details);
+
+
+      userFactory.settimings(user_details, function(data) {
+    $scope.details = JSON.parse(data);
+
+
+
+})
+  //  console.log("here");
+    // $cookies.remove('logged_user');
+     $location.url('"#/staff');
+  }
+
+
+
+
 });

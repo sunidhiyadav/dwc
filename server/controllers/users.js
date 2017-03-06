@@ -64,26 +64,34 @@ module.exports=(function(){
     ///////
 		getUsers: function(req, res){
 			User.find({}, function(err, users){
-				if(err){										
-				} else{					
+				if(err){
+				} else{
+					res.json(users);
+				}
+			});
+		},
+		getTiming: function(req, res){
+			User.save(function(err, users){
+				if(err){
+				} else{
 					res.json(users);
 				}
 			});
 		},
 		getUser: function(req, res){
 			User.findOne({_id: req.params.id}, function(err, result){
-				if(err){					
-				} else {					
+				if(err){
+				} else {
 					res.json(result);
 				}
 			});
 		},
 		updateUser: function(req, res){
 			User.findOne({_id:req.params.id}, function(err, result){
-				if (err){					
+				if (err){
 					res.json(err);
 				}
-				else {					
+				else {
 					// result.userName=req.body.userName;
 					result.emailAddress=req.body.emailAddress;
 					result.password=req.body.password;
@@ -92,9 +100,9 @@ module.exports=(function(){
 					result.phoneNumber=req.body.phoneNumber;
 					result.userLevel=req.body.userLevel;
 					result.save(function(err, result){
-						if(err){							
+						if(err){
 							res.json(err);
-						} else{							
+						} else{
 							res.json(result);
 						}
 					});
@@ -102,19 +110,19 @@ module.exports=(function(){
 			});
 		},
 		userRegister: function(req, res){
-			user=new User(req.body);			
+			user=new User(req.body);
 			user.save(function(err, result){
-				if(err){										
-				} else{					
+				if(err){
+				} else{
 					res.json(result);
 				}
 			})
 		},
-		removeUser: function(req, res){			
+		removeUser: function(req, res){
 			User.remove({_id:req.params.id}, function(err, result){
-				if(err){					
+				if(err){
 				}
-				else{					
+				else{
 					res.json(result);
 				}
 			})

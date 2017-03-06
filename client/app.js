@@ -1,4 +1,4 @@
-var DWCAppModule = angular.module("DWC",["ngRoute", "ngMessages", "ngCookies", "base64", "naif.base64"]);
+var DWCAppModule = angular.module("DWC",["ngRoute", "ngMessages", "ngCookies", "base64", "naif.base64", "ui.bootstrap.modal","ngFlash"]);
 (function(){
 	DWCAppModule.config(function($routeProvider){
 		$routeProvider
@@ -24,6 +24,8 @@ var DWCAppModule = angular.module("DWC",["ngRoute", "ngMessages", "ngCookies", "
 		.when('/aboutus',
 		{
 			templateUrl: "partials/aboutus/aboutus.html",
+			controller: 'AuthenticateController'
+
 		})
 
 		.when('/aboutus/whoweare',
@@ -66,8 +68,31 @@ var DWCAppModule = angular.module("DWC",["ngRoute", "ngMessages", "ngCookies", "
 		.when('/employers',
 		{
 			templateUrl: "partials/employers/employers.html",
+			controller: 'employersController'
 		})
 		.when('/employers/reserveworker',
+		{
+			// templateUrl: "partials/employers/reserveworker.html",
+			// controller: 'jobNewController'
+			templateUrl: "partials/employers/user_popup.html",
+			controller: 'registerController'
+		})
+		.when('/employers/login',
+		{
+			templateUrl: "partials/employers/login.html",
+			controller: 'loginUserController'
+		})
+		.when('/employers/register',
+		{
+			templateUrl: "partials/employers/register.html",
+			controller: 'registerUserController'
+		})
+		.when('/employers/logout',
+		{
+			templateUrl: "partials/employers/employers.html",
+			controller: 'logoutController'
+		})
+		.when('/employers/reserveworkerpage',
 		{
 			templateUrl: "partials/employers/reserveworker.html",
 			controller: 'jobNewController'
@@ -95,6 +120,11 @@ var DWCAppModule = angular.module("DWC",["ngRoute", "ngMessages", "ngCookies", "
 		.when('/employers/moving',
 		{
 			templateUrl: "partials/employers/moving.html",
+		})
+		.when('/employers/register',
+		{
+			templateUrl: "partials/employers/register.html",
+			controller: 'registerController'
 		})
 // -------------EMPLOYERS END
 
@@ -192,6 +222,11 @@ var DWCAppModule = angular.module("DWC",["ngRoute", "ngMessages", "ngCookies", "
 			templateUrl: "partials/staff/jobs/new.html",
 			controller: 'jobNewController'
 		})
+		.when('/staff/jobs/timings',
+		{
+			templateUrl: "partials/staff/jobs/timings.html",
+			controller: 'loginController'
+		})
 		.when('/staff/jobs/:id/assign',
 		{
 			templateUrl: "partials/staff/jobs/assign.html",
@@ -266,3 +301,10 @@ var DWCAppModule = angular.module("DWC",["ngRoute", "ngMessages", "ngCookies", "
 //--------------END OF ANTI-#
 })
 }());
+
+DWCAppModule.directive('navigation', function() {
+  return {
+    restrict: 'EA',
+        controller: 'AuthenticateController as navvm'
+  }
+});

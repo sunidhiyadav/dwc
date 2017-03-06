@@ -5,6 +5,15 @@ var jobs = require('./../controllers/jobs.js');
 var mails = require('./../controllers/mails.js');
 var users = require('./../controllers/users.js');
 var pages = require('./../controllers/pages.js');
+var time = require('./../controllers/time.js');
+var employers = require('./../controllers/employers.js');
+var jwt = require('express-jwt');
+
+var auth = jwt({
+  secret: 'MY_SECRET',
+  userProperty: 'payload'
+});
+
 // var workers = require('../controllers/workers.js');
 
 module.exports = function(app){
@@ -15,6 +24,8 @@ module.exports = function(app){
 	app.get("/users/:id", users.getUser);
 	// app.get("/staff/createUser", users.userRegister);
 	app.get("/staff/allUsers", users.getUsers);
+  app.get("/staff/admintime", time.getTime);
+  app.post("/staff/timings", time.getTiming);
 	app.post("/staff/removeUser", users.removeUser);
 	app.post("/user/:id",function(req,res){
 		users.updateUser(req,res);
@@ -41,9 +52,10 @@ module.exports = function(app){
 	//----------------mails routes
 	app.get("/mails", mails.index); // show all mails
 	app.get("/mails/:id", mails.show); // show one mail
-	app.post("/mails", mails.create); // create a new mail
+	app.post("/mails", mails.create, mails.send); // create a new mail
 	app.put("/mails/:id", mails.update); // update a mail info
 	app.delete("/mails/:id", mails.delete); // delete a mail
+	//app.get("/sendemail", mails.send); // send email
 
 	//----------------pages routes
 	app.get("/pages", pages.index); // show all pages
@@ -51,6 +63,12 @@ module.exports = function(app){
 	app.post("/pages", pages.create); // create a new page
 	app.put("/pages/:id", pages.update); // update a page info
 	app.delete("/pages/:id", pages.delete); // delete a page
+
+
+	  app.post('/register', employers.register);
+    app.post('/userLogin', employers.userLogin);
+    app.post("/userdata", employers.userdata);
+
 
 	//----------------users routes
 	// app.get("/users", users.index); // show all users
